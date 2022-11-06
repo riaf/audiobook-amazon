@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Find Audiobooks on Amazon",
+  "version": "1.0.0",
+  "action": { "default_popup": "index.html" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "js": ["src/content.tsx"]
+    }
+  ],
+  "host_permissions": ["https://abjp-isbn-api.katteba.workers.dev/"]
+}
